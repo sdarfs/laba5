@@ -35,7 +35,6 @@ void TRIANGLES::input()
     }
     catch(const exception &ex){
         cout << "Ошибка: Некорректный ввод!" << endl;
-        cout << ex.what() << endl;
         cin.clear();
         cin.ignore(10, '\n');
     }

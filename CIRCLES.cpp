@@ -111,7 +111,6 @@ float CIRCLES::area_ring(CIRCLES r) {
 float CIRCLES::radius_second = 100;
 
 void CIRCLES::area_triangle_in_circle(float line1, float line2, float line3) {
-
     float radius;
     int p =0;
     while (p==0)  // пока не введены правильные числа
@@ -122,7 +121,7 @@ void CIRCLES::area_triangle_in_circle(float line1, float line2, float line3) {
             cout <<"введите радиус окружности: ";
             cin >> radius;
             // этот блок сработает, если пользователь ввел отрицательное число
-            if (radius = 0.0)
+            if (radius == 0.0)
                 throw "Division by zero";
             if (radius < 0.0)
                 throw "Minus radius";
@@ -134,7 +133,7 @@ void CIRCLES::area_triangle_in_circle(float line1, float line2, float line3) {
         p = 0;
         }
     }
-    if (p==1) cout<< line1*line2*line3 /(4*radius);
+    if (p==1) cout<<"S="<< line1*line2*line3 /(4*radius);
 
 }
 

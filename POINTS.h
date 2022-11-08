@@ -5,8 +5,6 @@
 class POINTS
 {
 private:
-
-
     float x{}, y{};
 
 public:

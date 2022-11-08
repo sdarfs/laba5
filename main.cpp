@@ -4,15 +4,17 @@
 #include "TRIANGLES.h"
 #include "CIRCLES.h"
 using namespace std;
+const int D = 5;
 int main() {
-    const int D = 5;
     float line[D];
     LINES::massive_input_one_dimensional(line,D); // одномерный массив(длиной 5) длин линий
-
 
     //с - столбцы, r - строки
    float lines[C][C];
    LINES::massive2(lines);
+
+   POINTS point;
+   point.input();
 
    TRIANGLES triangle;
    triangle.input();

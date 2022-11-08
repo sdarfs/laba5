@@ -24,8 +24,6 @@ public:
     POINTS getEndPoint();
     static void massive_input_one_dimensional(float *a, int n);
     static void massive2(float(*a)[C]);
-
-
 };
 
 #endif //TASK2_LINES_H

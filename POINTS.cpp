@@ -15,17 +15,23 @@ POINTS::POINTS(float x, float y) {
 
 void POINTS::input() {
     cin.exceptions(cin.failbit);
-    try {
-        cin  >> this->x >> this->y;
+    int p =0;
+    while (p==0)  // пока не введены правильные числа
+    {
+        try {
+            cout<<"Введите координаты точки: ";
+            p = 1;
+            cin >> this->x >> this->y;
 
+        }
+        catch (const exception &ex) {
+            cout << "Ошибка: Некорректный ввод!" << endl;
+            cin.clear();
+            cin.ignore(10, '\n');
+            p = 0;
+        }
     }
-    catch(const exception &ex) {
-        cout << "Ошибка: Некорректный ввод!" << endl;
-        cout << ex.what() << endl;
-        cin.clear();
-        cin.ignore(10, '\n');
-    }
-
+    if (p==1) output();cout << endl;
 }
 
 void POINTS::output(){
